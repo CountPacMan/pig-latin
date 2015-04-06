@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-2.1.3.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Queen attack!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Queen attack!</h1>
+
+      <div id="error" class="text-danger h3">
+      </div>
+      <form id="queen-attack">
+        <div class="form-group">
+          <label for="queen_row">Enter the queen&apos;s row position</label>
+          <input id="queen_row" type="text">
+
+          <label for="queen_col">Enter the queen&apos;s column position</label>
+          <input id="queen_col" type="text">
+
+          <label for="attack_row">Enter the row position to attack</label>
+          <input id="attack_row" type="text">
+
+          <label for="attack_col">Enter the column position to attack</label>
+          <input id="attack_col" type="text">
+        </div>
+
+        <button type="submit" class="btn">Fight!</button>
+      </form>
+
+      <div id="result">
+        <h3>The position is <span id="not" class="text-danger"></span> in range of the queen.</h3>
+      </div>
+    </div>
+  </body>
+</html>
