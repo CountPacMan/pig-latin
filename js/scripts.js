@@ -8,11 +8,14 @@ function pigLatin(word) {
   } else if ($.inArray(word[0], consonants) !== -1) {
     do {
       word = word.substring(1) + word[0];
+      if (word[word.length - 1] === 'q') {
+        if (word[0] === 'u') {
+          word = word.substring(1) + word[0];
+        }
+      }
     } while ($.inArray(word[0], vowels) === -1);
     return word + "ay";
   }
-
-
 }
 
 jQuery(document).ready(function() {

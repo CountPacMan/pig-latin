@@ -15,4 +15,16 @@ describe('pigLatin', function() {
     expect(pigLatin("start")).to.equal("artstay");
   });
 
+  it("moves qu together to end of word and adds ay", function() {
+    expect(pigLatin("quit")).to.equal("itquay");
+  });
+
+  it("moves squ together to end of word and adds ay", function() {
+    expect(pigLatin("squeal")).to.equal("ealsquay");
+  });
+
+  it("ensures that word that starts with u follows vowel rule", function() {
+    expect(pigLatin("unusual")).to.equal("unusualay");
+  });
+
 });
