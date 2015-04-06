@@ -19,11 +19,18 @@ function pigLatin(word) {
 }
 
 jQuery(document).ready(function() {
+  $("#pig-latin").submit(function(event) {
+    $("#error").empty();
+    var word = $("#word").val();
+    if (word.search(/[^a-z]/i) !== -1) {
+      $("#error").prepend("<p>Only letters allowed</p>");
+      $("#result").hide();
+    } else {
+      var pig_word = pigLatin(word);
+      $("#pig_word").text(pig_word);
+      $("#result").show();
+    }
 
-
-
-  event.preventDefault();
-
-
-
+    event.preventDefault();
+  });
 });
