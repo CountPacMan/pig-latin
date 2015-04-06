@@ -1,6 +1,5 @@
 function pigLatin(word) {
-  var vowels = ['a', 'e', 'i', 'o', 'u'];
-
+  var vowels = 'aeiou';
   var consonants = 'bcdfghjklmnpqrstvwxyz';
 
   if ($.inArray(word[0], vowels) !== -1) {
